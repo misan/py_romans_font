@@ -22,7 +22,7 @@ def wrap_and_draw(c, x, y, text, font, line_height, max_width, bottom_margin, to
     current_line = ""
     for word in words:
         test_line = current_line + " " + word if current_line else word
-        if font.get_string_length(test_line) > max_width:
+        if font.get_string_length(test_line)/32 > max_width:
             if y_cursor < bottom_margin:
                 c.showPage()
                 c.setFont("Helvetica-Bold", 12) # Re-set font on new page
@@ -36,7 +36,7 @@ def wrap_and_draw(c, x, y, text, font, line_height, max_width, bottom_margin, to
     if current_line:
         if y_cursor < bottom_margin:
             c.showPage()
-            c.setFont("Helvetica-Bold", 12) # Re-set font on new page
+            c.setFont("Helvetica-Bold", 12)
             y_cursor = top_y
         draw_string(c, x, y_cursor, current_line, font)
         y_cursor -= line_height
@@ -45,18 +45,19 @@ def wrap_and_draw(c, x, y, text, font, line_height, max_width, bottom_margin, to
 def generate_pdf(filename, font_class, font_name):
     c = canvas.Canvas(filename, pagesize=letter)
     width, height = letter
-
+    print(width, height)
     font = font_class()
-    font_size = 0.8
-    font.scale = font_size
+    font_size = 1
+    font.scale = 0.03
 
     text1 = "This is a sample paragraph rendered using the Romans vector font. It demonstrates the ability to draw text from a custom font definition within a PDF document. The Quick Brown Fox Jumps over a Lazy Dog."
     text2 = ", ".join(map(str, range(1, 201)))
-
-    x = 50
+    #text1 ="a" 
+    #text2 ="1"
+    x = 20
     top_y = height - 100
     bottom_margin = 50
-    line_height = 24 * font_size * 1.5
+    line_height = 24 * font_size * 1.2
     max_width = width - 2 * x
 
     # --- Draw the first paragraph ---
