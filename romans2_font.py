@@ -39,14 +39,21 @@ class Romans2:
                     max_x_glyph = 0
 
                 glyph_width = max_x_glyph - min_x_glyph
-                padding = 4
-                self.l[i] = glyph_width + padding
-
+                
+                total_padding = 4
+                left_bearing = total_padding / 2
+                
+                if i == ord('1'):
+                    total_padding = 6
+                    left_bearing = 1.5 # Asymmetrical bearing for '1'
+                
+                self.l[i] = glyph_width + total_padding
+                
                 shifted_paths = []
                 for path in temp_paths:
                     new_path = []
                     for x, y in path:
-                        new_path.append((x - min_x_glyph, y))
+                        new_path.append((x - min_x_glyph + left_bearing, y))
                     shifted_paths.append(new_path)
                 
                 self.t[i] = shifted_paths
