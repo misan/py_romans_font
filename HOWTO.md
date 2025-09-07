@@ -109,8 +109,8 @@ fill_color = "black"
 
 # 5. Draw the paths on the image
 for path in paths:
-    # The path needs to be translated to the correct position
-    translated_path = [(p[0] + x_pos, p[1] + y_pos) for p in path]
+    # The path needs to be translated to the correct position and the y-axis flipped
+    translated_path = [(p[0] + x_pos, y_pos - p[1]) for p in path]
     draw.line(translated_path, fill=fill_color, width=1)
 
 # 6. Save the image
