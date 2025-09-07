@@ -52,7 +52,7 @@ def generate_pdf(filename, font_class, font_name):
     font_size = 0.8
     font.scale = font_size
 
-    text1 = "This is a sample paragraph rendered using the Romans vector font. It demonstrates the ability to draw text from a custom font definition within a PDF document."
+    text1 = "This is a sample paragraph rendered using the Romans vector font. It demonstrates the ability to draw text from a custom font definition within a PDF document. The Quick Brown Fox Jumps over a Lazy Dog."
     text2 = ", ".join(map(str, range(1, 201)))
 
     x = 50
