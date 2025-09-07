@@ -92,6 +92,8 @@ for path in paths:
 
 image.save("hello_pillow.png")
 ```
+## visual_vector.py
+`visual_vector.py` allows you to create a PDF of the nesting performed by the https://github.com/misan/packing2D project using the Bin-??.txt file output. 
 
 ## License
 
