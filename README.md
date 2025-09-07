@@ -1,6 +1,6 @@
 # Romans Vector Font Libraries
 
-This project provides two simple, self-contained Python libraries for rendering text using a classic vector font. The font data is embedded directly in the Python files, so there are no external dependencies for the font itself.
+This project provides two simple, self-contained Python libraries for rendering text using a classic vector font. The font data is embedded directly in the Python files, so there are no external dependencies for the font itself. Font data was obtained from https://ncplot.com/stickfont/stickfont.htm and later massaged a bit with Gemini AI.
 
 ## Features
 
