@@ -70,28 +70,6 @@ draw_string(c, 50, 700, "Hello, PDF!", font)
 c.save()
 ```
 
-### Rendering to an Image with `Pillow`
-
-This example uses the `Romans` font to render text onto a PNG image.
-
-```python
-from PIL import Image, ImageDraw
-from romans_font import Romans
-
-image = Image.new("RGB", (400, 100), "white")
-draw = ImageDraw.Draw(image)
-
-font = Romans()
-font.scale = 1.5
-paths = font.get_string("Hello, Pillow!")
-
-x_pos, y_pos = 20, 40
-for path in paths:
-    translated_path = [(p[0] + x_pos, p[1] + y_pos) for p in path]
-    draw.line(translated_path, fill="black", width=1)
-
-image.save("hello_pillow.png")
-```
 ## visual_vector.py
 `visual_vector.py` allows you to create a PDF of the nesting performed by the https://github.com/misan/packing2D project using the Bin-??.txt file output. 
 
