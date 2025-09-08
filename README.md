@@ -77,7 +77,7 @@ c.save()
 I was worried about the origins of the font I used, but after some digging with Hershey Fonts. 
 
 The Hershey Fonts are a set of vector fonts with a liberal license.
-
+```
 USE RESTRICTION:
     This distribution of the Hershey Fonts may be used by anyone for
     any purpose, commercial or otherwise, providing that:
@@ -98,6 +98,6 @@ USE RESTRICTION:
             the U.S. NTIS where each point is described
             in eight bytes as "xxx yyy:", where xxx and yyy are
             the coordinate values as ASCII numbers.
-
+```
 
 This project's source is licensed under the MIT License. See the `LICENSE.md` file for details.
