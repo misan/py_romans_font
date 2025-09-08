@@ -74,7 +74,7 @@ c.save()
 `visual_vector.py` allows you to create a PDF of the nesting performed by the https://github.com/misan/packing2D project using the Bin-??.txt file output. 
 
 ## License
-I was worried about the origins of the font I used, but after some digging with Hershey Fonts. 
+I was worried about the origins of the font I used, but after some digging with Hershey Fonts, comparing it with the one I was using, it seems to be the same font. 
 
 The Hershey Fonts are a set of vector fonts with a liberal license.
 ```
